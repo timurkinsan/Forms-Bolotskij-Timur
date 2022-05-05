@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: poppins;
+	font-size: 16px;
+	color: #fff;
+}
+.forms-container {
+	background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    margin-top: 170px;
+    width: 500px;
+}
+.forms-container:before {
+	background-image: url("../img/background.jpg");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	filter: blur(2px);
+}
+.form-title {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.form-name {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+input {
+	margin: 10px 0px;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 18px;
+	font-family: poppins;
+}
+.buttons-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 40px;
+}
+.button {
+	background-color: deepskyblue;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 140px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px;
+}  
+/* progress bar */
+ul.progress_bar{
+	width: 100%;
+	padding: 0 18px;
+	height: 2em;
+	font-size: 10px;
+	margin-bottom: 40px;
+}
+ul.progress_bar li{
+	width: 23.5%;
+	float: left;
+	height: 100%;
+	list-style: none;
+	position: relative;
+}
+ul.progress_bar li span{
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: #fff;
+	height: .4em;
+	z-index: 1;
+}
+ul.progress_bar li span.activated {
+	background-color: #debea0;
+}
+ul.progress_bar li.activated:before{
+	background: #debea0;
+	box-sizing: border-box;
+}
+ul.progress_bar li:before{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	width: 2em;
+	height: 2em;
+	box-sizing: border-box;
+	border-radius: 2em;
+	z-index: 2;
+}
+ul.progress_bar li:last-child:after{
+	content: '';
+	display: block;
+	position: absolute;
+	right: -2em;
+	top: 0;
+	background: #fff;
+	width: 2em;
+	height: 2em;
+	border-radius: 2em;
+	box-sizing: border-box;
+	z-index: 2;
+}
+ul.progress_bar li:last-child.activated-last:after {
+	background: #debea0;
+}
